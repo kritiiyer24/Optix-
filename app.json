@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Optix",
+    "slug": "optix",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Optix uses the camera to enroll and unlock the parent face on this device.",
+        "NSPhotoLibraryUsageDescription": "Optix can use a photo you already have to enroll your face on this device."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Optix uses the camera to enroll and unlock the parent face on this device.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Optix uses your photos only to enroll your face on this device."
+        }
+      ],
+      "expo-status-bar"
+    ]
+  }
+}
